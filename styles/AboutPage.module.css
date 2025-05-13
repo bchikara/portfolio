@@ -206,6 +206,12 @@
   color: var(--text-color);
 }
 
+.skillsCodeSnippet {
+  overflow-x: hidden;
+  width: 100%;
+  word-break: break-word;
+}
+
 
 /* --- Responsive Adjustments --- */
 @media screen and (max-width: 600px) {

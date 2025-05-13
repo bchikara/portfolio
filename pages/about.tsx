@@ -113,26 +113,36 @@ const AboutPage = () => {
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}><FaLaptopCode /> Tech Stack & Skills</h2>
             <div className={styles.skillsCodeSnippet}>
-              <SyntaxHighlighter
-                language="javascript"
-                style={oneDark}
-                showLineNumbers
-                wrapLines={true}
-                lineNumberStyle={{ fontSize: '0.8em', paddingRight: '1.5em', color: 'var(--text-secondary, #888)' }}
-                customStyle={{
+                <SyntaxHighlighter
+                  language="javascript"
+                  style={oneDark}
+                  showLineNumbers
+                  wrapLines={true}            
+                  // wrapLongLines={true}        
+                  lineNumberStyle={{
+                    fontSize: '0.8em',
+                    paddingRight: '1.5em',
+                    color: 'var(--text-secondary, #888)'
+                  }}
+                  customStyle={{
                     borderRadius: '8px',
                     border: '1px solid var(--border-color, rgba(255, 255, 255, 0.1))',
                     padding: '1.5em',
-                    margin: '0.5em 0'
-                }}
-                codeTagProps={{
+                    margin: '0.5em 0',
+                    whiteSpace: 'pre-wrap',      
+                    wordBreak: 'break-word'      
+                  }}
+                  codeTagProps={{
                     style: {
-                        fontFamily: 'var(--font-mono, "Fira Code", "Source Code Pro", monospace)'
+                      fontFamily: 'var(--font-mono, "Fira Code", "Source Code Pro", monospace)',
+                      whiteSpace: 'pre-wrap',    
+                      wordBreak: 'break-word'
                     }
-                }}
-              >
-                {skillsCodeString}
+                  }}
+                >
+                  {skillsCodeString}
               </SyntaxHighlighter>
+
             </div>
           </section>
 
