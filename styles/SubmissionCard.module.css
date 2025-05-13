@@ -1,0 +1,55 @@
+/* styles/SubmissionCard.module.css */
+.card {
+    background-color: var(--article-bg); /* Use CSS variable */
+    padding: 1rem 1.2rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1)); /* Use CSS variable */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+  
+  .title a {
+    color: var(--text-color); /* Use CSS variable */
+    text-decoration: none;
+  }
+  
+  .title a:hover {
+    text-decoration: underline;
+    color: var(--accent-color); /* Use CSS variable */
+  }
+  
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary); /* Use CSS variable */
+  }
+  
+  .details span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  
+  .status svg {
+    vertical-align: middle;
+  }
+  
+  .accepted {
+    color: var(--leetcode-easy-color, #3fb950); /* Or a general success color */
+  }
+  
+  .rejected {
+    color: var(--leetcode-hard-color, #f85149); /* Or a general error color */
+  }

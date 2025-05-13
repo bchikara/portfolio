@@ -1,0 +1,312 @@
+/* styles/LeetCodePage.module.css */
+
+/* General Layout & Page Heading (from your provided styles) */
+.layout {
+    max-width: 900px;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .pageHeading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 3rem;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color); /* Uses CSS variable */
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+  }
+  
+  .pageSubtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7); /* Could be var(--text-secondary) or similar */
+    margin-bottom: 3rem;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  
+  /* Main LeetCode Page Container */
+  .leetCodePage { /* Renamed from .githubPage */
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Spacing between sections */
+  }
+  
+  /* Profile Section (from your provided styles) */
+  .profileSection {
+    background: var(--article-bg); /* Uses CSS variable */
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem; /* This might be redundant if .leetCodePage has gap */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Could be var(--border-color) */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+  
+  .avatar {
+    border-radius: 50%;
+    border: 3px solid var(--accent-color); /* Uses CSS variable */
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Ensures avatar image covers the area nicely */
+  }
+  
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Adjusted gap for LeetCode stats layout */
+  }
+  
+  .username {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color); /* Uses CSS variable */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .username::before {
+    content: '@';
+    font-size: 1.5rem;
+    color: var(--accent-color); /* Uses CSS variable */
+    margin-right: 0.25rem;
+  }
+  
+  .username::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -4px;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-color); /* Uses CSS variable */
+  }
+  
+  /* LeetCode Stats */
+  .stats {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for multiple stat items */
+    justify-content: center; /* Center items when they wrap */
+    gap: 1rem 1.5rem; /* Row and column gap */
+  }
+  
+  .statItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary); /* Uses CSS variable */
+  }
+  
+  .statItem .statIcon { /* Targeting icon specifically if it's a child */
+    color: var(--accent-color); /* Uses CSS variable */
+    font-size: 1.1em; /* Slightly larger icon */
+  }
+  
+  /* Specific colors for LeetCode difficulty stats */
+  .statItem .easyColor {
+    color: var(--leetcode-easy-color, #4CAF50); /* Fallback if CSS var not defined */
+    font-weight: bold;
+  }
+  .statItem .mediumColor {
+    color: var(--leetcode-medium-color, #FFC107); /* Fallback */
+    font-weight: bold;
+  }
+  .statItem .hardColor {
+    color: var(--leetcode-hard-color, #F44336); /* Fallback */
+    font-weight: bold;
+  }
+  
+  
+  /* Section Headers (from your provided styles) */
+  .sectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0 1rem; /* Adjusted top margin */
+  }
+  
+  .sectionIcon {
+    color: var(--accent-color); /* Uses CSS variable */
+    font-size: 1.2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color); /* Uses CSS variable */
+  }
+  
+  /* Heatmap Container (adapted from .contributions) */
+  .heatmapContainer {
+    background: var(--article-bg); /* Uses CSS variable */
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Could be var(--border-color) */
+    width: 100%;
+    overflow-x: auto; /* Important for responsiveness */
+  }
+  
+  .heatmapSubtext {
+    font-size: 0.9rem;
+    color: var(--text-secondary); /* Uses CSS variable */
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* react-calendar-heatmap custom colors */
+  .heatmapContainer :global(.react-calendar-heatmap .color-empty) {
+    fill: var(--heatmap-empty-color, #3a3f47); /* Uses CSS variable with fallback */
+  }
+  .heatmapContainer :global(.react-calendar-heatmap .color-scale-1) {
+    fill: var(--heatmap-scale-1-color, #0e4429);
+  }
+  .heatmapContainer :global(.react-calendar-heatmap .color-scale-2) {
+    fill: var(--heatmap-scale-2-color, #006d32);
+  }
+  .heatmapContainer :global(.react-calendar-heatmap .color-scale-3) {
+    fill: var(--heatmap-scale-3-color, #26a641);
+  }
+  .heatmapContainer :global(.react-calendar-heatmap .color-scale-4) {
+    fill: var(--heatmap-scale-4-color, #39d353);
+  }
+  .heatmapContainer :global(.react-calendar-heatmap text) {
+    font-size: 8px; /* Smaller weekday labels if needed */
+    fill: var(--text-secondary);
+  }
+  .heatmapContainer :global(.react-calendar-heatmap .react-calendar-heatmap-weekday-labels th) {
+      padding-bottom: 5px; /* Add space below weekday labels */
+  }
+  
+  
+  /* Submissions Container (renamed from .reposContainer) */
+  .submissionsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem; /* This might be redundant if .leetCodePage has gap */
+  }
+  
+  /* Underline Style (from your provided styles) */
+  .underline {
+    cursor: pointer;
+    color: var(--text-color, white); /* Uses CSS variable */
+    text-decoration: none;
+    background-image: linear-gradient(
+      120deg,
+      var(--accent-color) 100%,
+      var(--accent-color) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+  }
+  
+  .underline:hover {
+    background-size: 100% 88%;
+  }
+
+  .lastUpdatedText {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-secondary, #adb5bd);
+    margin-top: 2rem;
+  }
+  
+  
+  /* Media Queries (from your provided styles, with .contributions -> .heatmapContainer) */
+  @media screen and (max-width: 768px) {
+    .profileInfo {
+      /* flex-direction: column; already set */
+      /* align-items: center; already set */
+      padding: 0 1rem; /* Reduce padding on smaller screens */
+    }
+  
+    .pageTitle {
+      font-size: 1.75rem;
+    }
+  
+    .pageSubtitle {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  
+    .userInfo {
+      width: 100%;
+      gap: 1rem; /* Adjust gap for user info on mobile */
+    }
+  
+    .submissionsContainer { /* Renamed from .reposContainer */
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .heatmapContainer { /* Renamed from .contributions */
+      display: none; /* Hides heatmap on medium-large tablets and below */
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .avatar {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .username {
+      font-size: 1.4rem;
+    }
+  
+    .username::before {
+      font-size: 1.4rem;
+    }
+  
+    .sectionIcon {
+      font-size: 1.1rem;
+      /* padding: 0.4rem; - May not be needed if just an icon */
+    }
+  
+    .sectionTitle {
+      font-size: 1.2rem;
+    }
+  
+    .stats {
+      flex-direction: column; /* Stack stats vertically */
+      align-items: center; /* Center them when stacked */
+      gap: 0.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 900px) {
+    .submissionsContainer { /* Renamed from .reposContainer */
+      grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+    }
+  }

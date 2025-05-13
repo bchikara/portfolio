@@ -1,0 +1,277 @@
+/* styles/AboutPage.module.css */
+
+/* --- Base Styles (Keep yours, or use these adjusted ones) --- */
+.container {
+  max-width: 900px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  color: var(--text-color);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.aboutContent {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color-light, rgba(var(--accent-color-rgb), 0.3));
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.paragraph {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.highlight {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* --- Skills Code Snippet --- */
+.skillsCodeSnippet {
+  /* The SyntaxHighlighter component creates its own pre/code tags.
+     Styling is mostly handled by the 'customSyntaxStyle' object passed to the component.
+     This container can be used for additional margins or width control if needed. */
+  margin-bottom: 1.5rem;
+  border-radius: 8px; /* Ensure this matches pre's border-radius if snippet overflows */
+  overflow: hidden; /* Hides scrollbars if syntaxhighlighter itself doesn't have rounded corners */
+}
+
+/* --- Timeline Styles (Keep from previous step) --- */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-left: 1rem;
+  border-left: 3px solid var(--accent-color-light, rgba(var(--accent-color-rgb), 0.3));
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelinePoint {
+  position: absolute;
+  left: -2rem;
+  top: 0.3rem;
+  transform: translateX(-45%);
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  border: 3px solid var(--bg-color, #161b22);
+  z-index: 1;
+}
+
+.timelineContent {
+  background-color: var(--article-bg, rgba(255, 255, 255, 0.05));
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+}
+
+.timelineCompany {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.timelineTitle {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.timelineMeta {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.timelineDuties {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.timelineDuties li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.timelineDuties li::marker {
+    color: var(--accent-color);
+}
+
+.timelineDuties li:last-child {
+  margin-bottom: 0;
+}
+
+.timelineTech {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.timelineTech strong {
+  color: var(--accent-color);
+}
+
+/* --- Awards & Recognition Styles --- */
+
+
+.awardItem {
+  background-color: var(--article-bg, rgba(255, 255, 255, 0.05));
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  margin-bottom: 1.5rem;
+}
+
+.awardItem:last-of-type { /* For the last actual award item before the italic note */
+    margin-bottom: 1rem;
+}
+
+.awardTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.awardSource {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.awardDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+
+/* --- Responsive Adjustments --- */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .paragraph {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+    border-left-width: 2px;
+  }
+
+  .timelinePoint {
+    left: -1.5rem; /* Should be same as padding-left of .timeline */
+    width: 0.8rem;
+    height: 0.8rem;
+    border-width: 2px;
+  }
+
+  .timelineContent, .awardItem {
+    padding: 1rem;
+  }
+
+  .timelineCompany {
+    font-size: 1.1rem;
+  }
+
+  .timelineTitle {
+      font-size: 0.95rem;
+  }
+
+   .timelineDuties li {
+    font-size: 0.9rem;
+  }
+
+  .awardTitle {
+    font-size: 1.1rem;
+  }
+
+  .awardDescription, .awardSource {
+    font-size: 0.9rem;
+  }
+
+  /* Ensure syntax highlighter font size is also responsive if needed */
+  /* Custom style object for SyntaxHighlighter takes care of its internal font sizes.
+     You could make `customSyntaxStyle` itself responsive by defining it within the component
+     and adjusting based on window width, but that's more complex.
+     For simplicity, the base 0.9em in customSyntaxStyle should scale well. */
+}
