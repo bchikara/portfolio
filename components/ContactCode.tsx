@@ -7,6 +7,11 @@ const contactItems = [
     href: 'https://bchikara.com',
   },
   {
+    social: 'phone',
+    link: '+1 (315) 575-7585',
+    href: 'tel:+13155757385',
+  },
+  {
     social: 'email',
     link: 'bhupeshchikara@gmail.com',
     href: 'mailto:bhupeshchikara@gmail.com',

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { VscArrowRight } from 'react-icons/vsc';
+import { VscArrowRight, VscCloudDownload } from 'react-icons/vsc';
 
 import styles from '@/styles/HomePage.module.css';
 
@@ -34,6 +34,10 @@ export default function HomePage() {
     { code: '      <div className="cta">', type: 'object-method' },
     {
       code: '        <Link href="/projects">View Projects</Link>',
+      type: 'object-method',
+    },
+    {
+      code: '        <Link href="/resume.pdf" download>Download CV</Link>',
       type: 'object-method',
     },
     { code: '      </div>', type: 'object-method' },
@@ -104,6 +108,13 @@ export default function HomePage() {
           <div className={styles.actionLinks}>
             <Link href="/projects" className={styles.primaryLink}>
               View Projects <VscArrowRight />
+            </Link>
+            <Link
+              href="/cv/Bhupesh_Chikara_Resume.pdf" // Replace with your CV's filename
+              download="Bhupesh_Chikara_CV.pdf" // Optional: filename for the downloaded file
+              className={`${styles.primaryLink}`} // You might want a different style for this
+            >
+              Download CV <VscCloudDownload /> {/* Added download icon */}
             </Link>
           </div>
         </div>
