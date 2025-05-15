@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Project } from '@/types';
 
 import styles from '@/styles/ProjectCard.module.css';
+import { FaExternalLinkSquareAlt, FaGithub } from 'react-icons/fa';
 
 interface ProjectCardProps {
   project: Project;
@@ -16,12 +17,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       className={styles.card}
     >
       <div className={styles.content}>
-        <div className={styles.logoWrapper}>
-          <Image
+        <div className={styles.logoWrapper} data-label={`${project.title.toLowerCase().replace(' ','-')}`}>
+           <img
             src={project.logo}
             alt={`${project.title} logo`}
-            width={24}
-            height={24}
             className={styles.logo}
           />
         </div>
@@ -31,7 +30,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <p>Technologies: 
           <span>{project.technologies}</span></p>
         </div>
-        {/* <div className={styles.links}>
+        <div className={styles.links}>
+          {
+            project.link?
         <a
                       href={project.link}
                       target="_blank"
@@ -40,18 +41,22 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                       className={styles.livelink}
                     >
                       <span>Live link </span><FaExternalLinkSquareAlt size={16} className={styles.icon} />
-                    </a>
+                    </a>:<></>
+          }
+          {
+            project.github_link?
           <a
-                      href={project.link}
+                      href={project.github_link}
                       target="_blank"
                       rel="noopener noreferrer"
                       title="View Repository"
                       className={styles.gitlink}
                     >
                       <span>View on Github </span><FaGithub size={16} className={styles.icon} />
-                    </a> */}
+                    </a>:<></>
+          }
 
-        {/* </div> */}
+        </div>
       </div>
     </div>
   );

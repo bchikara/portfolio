@@ -14,6 +14,7 @@ export interface Project {
   description: string;
   logo: string;
   link: string;
+  github_link:string;
   slug: string;
   technologies: Array<string>;
 }
