@@ -25,7 +25,7 @@ export const projects: Project[] = [
       'LaCarte is a smart scanning app that allows diners to seamlessly browse the menu, place orders, and make payments—all without waiting for a waiter. By simply scanning a QR code, users can view the restaurant’s offerings, customize their orders, and pay instantly, creating a faster, contactless, and more convenient dining experience.',
     logo: '/logos/la_carte.png',
     link: 'https://thelacarte.com/',
-    github_link:'',
+    github_link:'https://github.com/bchikara/la-carte',
     slug: 'bchikara-portfolio',
     technologies:['React, Firebase, D3.js'],
   },
