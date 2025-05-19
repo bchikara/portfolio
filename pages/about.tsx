@@ -13,6 +13,21 @@ const awardsData = [
     title: 'Open Source Contribution & Community Impact',
     source: 'Smart Joules Pvt. Ltd.',
     description: 'Developed an open-source NPM module for multi-select autocomplete, fostering code reusability and best practices, leading to a 40% increase in community contributions.',
+  },
+  {
+    title: 'Winner - Hackathon 1.0',
+    source: 'State Level University - DIT University',
+    description: 'Project: Helping Hands - Connecting NGOs and food beneficiaries for food donation.',
+  },
+  {
+    title: 'Applause Award (3 consecutive times)',
+    source: 'Deloitte',
+    description: 'Recognized as Senior Software Engineer for Team Leadership, Project Ownership, and solving complex dashboard algorithms.',
+  },
+  {
+    title: 'Consistent Problem Solver',
+    source: 'Syracuse University',
+    description: 'Solved LeetCode problems consecutively for 6 months.',
   }
 ];
 
