@@ -14,7 +14,7 @@ export const projects: Project[] = [
     description:
       `ProCode is a Progressive Web App (PWA) designed to replicate a real-life coding interview experience. It features an AI-powered avatar that presents coding questions, listens to the candidate's thought process, offers guidance, and evaluates code submissions—mimicking the dynamics of a real technical interview to help users prepare more effectively.`,
     logo: '/logos/procode.png',
-    link: '',
+    link: 'https://www.youtube.com/watch?v=yECqnPjo67A',
     github_link:'',
     slug: 'procode',
     technologies:['React, Node.js, Websocket, Firebase, D3.js, DeepSeek API'],
