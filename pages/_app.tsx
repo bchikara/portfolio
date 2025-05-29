@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
-
+import { Analytics } from "@vercel/analytics/next"
 import Layout from '@/components/Layout';
 import Head from '@/components/Head';
 
@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Layout>
       <Head title={`Bhupesh Chikara | ${pageProps.title}`} />
       <Component {...pageProps} />
+      <Analytics />
     </Layout>
   );
 }
