@@ -30,14 +30,13 @@ export const projects: Project[] = [
     technologies:['React, Firebase, D3.js'],
   },
   {
-    title: 'VinayakM',
-    description:
-      'VinayakM is a user-friendly application designed for both doctors and patients. It enables patients to choose doctors based on their preferences, book consultations, and receive digital prescriptions—all in one seamless platform. The app simplifies healthcare access and enhances the consultation experience for users.',
-    logo: '/logos/vinayakm.svg',
-    link: '',
-    github_link:'',
-    slug: 'vinayakm',
-    technologies:['React, Node.js, Firebase, Websocket, D3.js'],
+    title:'Cold Mail OutReach',
+    description:'Cold Mail Outreach is a full-stack web application designed to streamline the job application process. It allows you to manage contacts, use dynamic email templates, send personalized emails with attachments, and track your outreach history, all from a beautiful, Gemini-inspired dark-mode interface.',
+    logo: '/logos/cold_mail_outreach.png',
+    link:'https://cold-mail-outreach.vercel.app/',
+    github_link:'https://github.com/bchikara/cold-mail-outreach',
+    slug:'cold_mail_outreach',
+    technologies:['React, Firebase, NodeMailer, Zustand, Tailwind CSS']
   },
   {
     title: 'Job Automator',
@@ -48,6 +47,15 @@ export const projects: Project[] = [
     github_link: 'https://github.com/bchikara/job_automater?tab=readme-ov-file#-automated-job-application-assistant',
     slug: 'bchikara-job-automator',
     technologies:['Python, Selenium, Gemini API, MongoDB'],
+  },{
+    title: 'VinayakM',
+    description:
+      'VinayakM is a user-friendly application designed for both doctors and patients. It enables patients to choose doctors based on their preferences, book consultations, and receive digital prescriptions—all in one seamless platform. The app simplifies healthcare access and enhances the consultation experience for users.',
+    logo: '/logos/vinayakm.svg',
+    link: '',
+    github_link:'',
+    slug: 'vinayakm',
+    technologies:['React, Node.js, Firebase, Websocket, D3.js'],
   },
   {
     title: 'Space Scrible',
