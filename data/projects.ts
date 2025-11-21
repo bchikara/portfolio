@@ -10,6 +10,26 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'CodeNova',
+    description:
+      `CodeNova is an AI-Powered Coding Interview Platform that won the Best Use of AI Award at CuseHacks 2025 (Anthropic-Sponsored). Built with Next.js 15 and TypeScript, it achieves sub-500ms response times across 155+ coding problems. The platform features real-time code execution via Socket.IO and Judge0 API supporting 8+ programming languages, 9+ interactive algorithm visualizers with React and Excalidraw integration, and dual AI tutoring combining Google Gemini API with Anam AI voice avatar. It includes conversation persistence, PDF analysis capabilities, and GitHub-style analytics tracking 52-week activity—creating a comprehensive coding interview preparation environment.`,
+    logo: '/logos/codenova.svg',
+    link: 'https://youtu.be/nOO4OvV3bIs?si=bn3XUohoX6FWnSv7',
+    github_link:'',
+    slug: 'codenova',
+    technologies:['Next.js 15, TypeScript, Socket.IO, Judge0 API, MongoDB, React, Excalidraw, Google Gemini API, Anam AI, Node.js'],
+  },
+  {
+    title: 'Opus',
+    description:
+      `Opus is a professional recording and streaming platform that revolutionizes video production workflows. It reduces post-recording wait time from 50 minutes to just 5 minutes through progressive chunk upload processing with 10-second intervals, handling 90% of video transcoding during recording. The platform enables real-time collaboration for 8+ participants with sub-second latency using MediaMTX WebRTC server and multi-track recording. Built on cloud-native microservices architecture, it orchestrates 6 services (Backend API, Media Processor, TTS, Transcription, Translation, WebRTC Server) using Apollo GraphQL gateway and PostgreSQL. Opus features 3 AI-powered capabilities: free voice generation with Coqui TTS, Whisper ASR transcription with speaker detection, and GPT-4 API chapter/highlight generation. The scalable chunk processing pipeline transcodes 4K video to multi-resolution formats achieving 99.9% processing success rate with JWT authentication and OAuth support.`,
+    logo: '/logos/opus.svg',
+    link: 'https://github.com/bchikara/opus?tab=readme-ov-file#-demo',
+    github_link:'https://github.com/bchikara/opus',
+    slug: 'opus',
+    technologies:['Node.js, TypeScript, BullMQ, FFmpeg, MediaMTX, Socket.IO, AWS S3, Redis, Apollo GraphQL, PostgreSQL, Python Flask, Coqui TTS, Whisper ASR, GPT-4 API, MongoDB, JWT, OAuth'],
+  },
+  {
     title: 'ProCode',
     description:
       `ProCode is a Progressive Web App (PWA) designed to replicate a real-life coding interview experience. It features an AI-powered avatar that presents coding questions, listens to the candidate's thought process, offers guidance, and evaluates code submissions—mimicking the dynamics of a real technical interview to help users prepare more effectively.`,
