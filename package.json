@@ -12,7 +12,7 @@
     "@vercel/analytics": "^1.5.0",
     "date-fns": "^4.1.0",
     "leetcode-query": "^2.0.0",
-    "next": "^15.2.3",
+    "next": "15.2.6",
     "react": "^19.0.0",
     "react-calendar-heatmap": "^1.10.0",
     "react-dom": "^19.0.0",
