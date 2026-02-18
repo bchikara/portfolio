@@ -65,6 +65,18 @@ const skillsCodeString = `const bhupesh = {
 
 const experienceData = [
     {
+        company: 'Stealth Startup',
+        title: 'Software Engineer Intern',
+        dates: 'May 2025 – Dec 2025',
+        location: 'New York, NY',
+        tech: 'React.js, Node.js, TypeScript, ADP API, Contentful, Next.js, OpenAI API, PostgreSQL, AWS',
+        duties: [
+        'Improved payroll processing efficiency by 50% for 5,500+ employees by building a full-stack ADP integration with an automated end-to-end payroll management system.',
+        'Built a custom rendering engine with reusable UI components using Contentful CMS and Incremental Static Generation (ISG), improving page load speed and SEO across applications.',
+        'Reduced workflow processing time by 40%+ by integrating OpenAI API for intelligent data extraction and task orchestration, eliminating repetitive manual operations across teams.',
+        ],
+    },
+    {
         company: 'Deloitte',
         title: 'Senior Software Engineer',
         dates: 'Feb 2021 – Jan 2024',
