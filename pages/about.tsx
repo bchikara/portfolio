@@ -1,5 +1,5 @@
 import styles from '@/styles/AboutPage.module.css';
-import { FaBriefcase, FaUniversity, FaAward, FaLaptopCode } from 'react-icons/fa';
+import { FaBriefcase, FaUniversity, FaAward, FaLaptopCode, FaCertificate } from 'react-icons/fa';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'; 
 
@@ -13,6 +13,11 @@ const awardsData = [
     title: 'Open Source Contribution & Community Impact',
     source: 'Smart Joules Pvt. Ltd.',
     description: 'Developed an open-source NPM module for multi-select autocomplete, fostering code reusability and best practices, leading to a 40% increase in community contributions.',
+  },
+  {
+    title: 'Winner - CuseHack 2025',
+    source: 'CuseHack / Syracuse University',
+    description: 'CodeNova - AI-Powered Coding Interview Platform. Won Best Use of AI award at Anthropic-sponsored hackathon. Built an intelligent coding practice platform with 50+ algorithm challenges, real-time code execution, and AI avatar tutoring.',
   },
   {
     title: 'Winner - Hackathon 1.0',
@@ -66,53 +71,81 @@ const skillsCodeString = `const bhupesh = {
 const experienceData = [
     {
         company: 'Stealth Startup',
-        title: 'Software Engineer Intern',
+        title: 'AI Engineer / Full Stack Intern',
         dates: 'May 2025 – Dec 2025',
         location: 'New York, NY',
-        tech: 'React.js, Node.js, TypeScript, ADP API, Contentful, Next.js, OpenAI API, PostgreSQL, AWS',
+        tech: 'Python, Node.js, TypeScript, Django, PostgreSQL, Redis, AWS, ADP API, OpenAI API, AWS Bedrock, Prometheus, Grafana',
         duties: [
-        'Improved payroll processing efficiency by 50% for 5,500+ employees by building a full-stack ADP integration with an automated end-to-end payroll management system.',
-        'Built a custom rendering engine with reusable UI components using Contentful CMS and Incremental Static Generation (ISG), improving page load speed and SEO across applications.',
-        'Reduced workflow processing time by 40%+ by integrating OpenAI API for intelligent data extraction and task orchestration, eliminating repetitive manual operations across teams.',
+        'Built and owned backend infrastructure for a production fintech SaaS on Node.js, Python, PostgreSQL, Redis, and AWS — maintained 99.99% uptime across multi-tenant architecture serving real financial transactions at scale.',
+        'Cut payroll processing time 50% for 5,500+ employees via idempotent ADP integration with exactly-once transaction semantics across distributed Django backend systems.',
+        'Reduced workflow latency 40%+ by engineering an NLP/ML inference orchestration pipeline using OpenAI API and AWS Bedrock — eliminating manual human-in-the-loop bottlenecks.',
+        'Built reusable LLM agent modules and prompt templates with Claude, accelerating AI delivery across teams.',
         ],
     },
     {
         company: 'Deloitte',
-        title: 'Senior Software Engineer',
+        title: 'Senior AI Engineer / Full Stack Developer',
         dates: 'Feb 2021 – Jan 2024',
         location: 'Bangalore, India',
-        tech: 'React, Redux, D3.js, Node.js, Three.js, TypeScript, AWS',
+        tech: 'Python, React, Redux, D3.js, Node.js, Three.js, TypeScript, AWS, GraphQL, GitHub Copilot, Claude, Amazon Bedrock',
         duties: [
-        'Designed and implemented custom responsive fragments and dashboards using React.js, Redux, Custom hooks, and Context API, resulting in a 35% increase in user interaction rates.',
-        'Leveraged D3.js to enable real-time exploration of charts, graphs, and maps within dashboards, reducing decision-making time by 25%.',
-        'Integrated Three.js for 3D data visualizations, enhancing overall user experience and data accuracy by 20%.',
-        'Coordinated cross-functional efforts, independently designing and deploying 3 new systems utilized by over 15 departments, significantly boosting team efficiency.',
+        'Delivered full-stack platform and AI architecture as a Deloitte consultant for PayPal — engineered distributed backend systems within PayPal\'s payments ecosystem processing $500M+ in transactions across 15 enterprise departments.',
+        'Owned GraphQL and REST API platform serving 2.5M+ weekly requests at 99.99% uptime — schema stitching, circuit breakers, N+1 elimination, 40% throughput increase.',
+        'Built distributed analytics infrastructure on AWS processing 10M+ monthly financial transactions — drove 35% engagement growth and 25% lower decision latency.',
+        'Led 7 HLD/LLD design reviews; blue-green CI/CD on AWS with 100% build automation; mentored 3 engineers — awarded Applause Award (3x consecutive).',
         ],
     },
     {
-        company: 'ToTheNew Pvt. Ltd.',
-        title: 'Software Engineer',
-        dates: 'Feb 2020 – Mar 2021',
+        company: 'TO THE NEW',
+        title: 'AI Engineer / Full Stack Developer',
+        dates: 'Feb 2020 – Feb 2021',
         location: 'Noida, India',
-        tech: 'Angular 4+, Node.js, MongoDB, Express, RxJS',
+        tech: 'Angular 4+, Node.js, MongoDB, Express, RxJS, Python',
         duties: [
-        'Engineered front-end solutions (COVID-19 dashboard, e-commerce platforms) using Angular 4+ and RxJS for clients like PWC.',
-        'Architected the TCH channel studying portal using Angular 4, REST API, and RxJS.',
-        'Implemented RxJS for handling asynchronous tasks, reducing loading times by 50% and increasing user retention rates by 15%.',
+        'Delivered full-stack solutions for enterprise clients including PwC — owning both the UI layer and the API contracts beneath it.',
+        'Migrated PwC\'s dashboard to Angular 4+ with lazy-loading, code-splitting, and tree-shaking — reducing bundle size 25% and lifting engagement 18%.',
+        'Designed REST API and MongoDB schema for the TCH portal with indexing and aggregation pipelines — resolved the top 3 production crashes and scaled to 500+ concurrent users.',
+        'Engineered async data workflows using RxJS (switchMap, debounceTime), request caching, and retry logic — cut page load time 50% and increased user retention 15%.',
+        ],
+    },
+    {
+        company: 'JuZtEvent',
+        title: 'Full Stack Developer',
+        dates: 'Dec 2019 – Feb 2020',
+        location: 'India',
+        tech: 'Angular, Node.js, Redis, WebSockets, SignalR, Azure',
+        duties: [
+        'Built a high-concurrency transactional platform where race conditions cost real money — directly analogous to order execution systems.',
+        'Engineered distributed seat-locking with Redis short-lived holds across Azure VMs/scale sets — reduced double-booking collisions to <0.1% during peak sales windows.',
+        'Designed idempotent reservation APIs with optimistic concurrency (request tokens/ETags) — eliminated duplicate submissions from unreliable networks, guaranteeing exactly-once semantics.',
+        'Delivered real-time seat availability to Angular clients via WebSockets/SignalR — sub-1s synchronization under high-concurrency load.',
         ],
     },
     {
         company: 'Smart Joules Pvt. Ltd.',
-        title: 'Joule Fellow',
+        title: 'Full Stack Developer',
         dates: 'Sept 2018 – Dec 2019',
         location: 'Dehradun, India',
-        tech: 'Angular, D3.js, TypeScript, RxJS',
+        tech: 'Angular, D3.js, TypeScript, RxJS, Node.js, Express',
         duties: [
-        'Created D3 dashboards, multi-select autocomplete, and D3 chart applications.',
-        'Developed an open-source NPM module for multi-select autocomplete, increasing community contributions by 40%.',
-        'Applied Angular and RxJS in constructing responsive D3 dashboards.',
+        'Created interactive D3 dashboards, advanced multi-select autocomplete components, and dynamic charting applications to improve data visualization and user experience.',
+        'Developed and published an open-source NPM module for multi-select autocomplete, increasing community contributions and adoption by 40%.',
+        'Built and integrated RESTful APIs using Node.js (Express), improving backend communication and reducing data fetching overhead by 35%.',
         ],
     },
+];
+
+const certificationsData = [
+  {
+    title: 'Artificial Intelligence Analyst 2019',
+    issuer: 'IBM',
+    credentialId: '9354-1556-4551-8848',
+  },
+  {
+    title: 'IBM Certified Application Developer - Cloud Platform v2',
+    issuer: 'IBM',
+    credentialId: '2377-1556-4560-3169',
+  },
 ];
 
 const AboutPage = () => {
@@ -221,8 +254,20 @@ const AboutPage = () => {
             <div className={styles.educationItem}>
                 <h3 className={styles.educationInstitution}>DIT University</h3>
                 <p className={styles.educationDegree}>Bachelor of Technology in Computer Science and Engineering</p>
-                <p className={styles.educationMeta}>Dehradun, India | Aug 2016 – May 2020</p>
+                <p className={styles.educationMeta}>Dehradun, India | Aug 2015 – May 2019</p>
             </div>
+          </section>
+
+          {/* Certifications Section */}
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}><FaCertificate /> Licenses & Certifications</h2>
+            {certificationsData.map((cert, index) => (
+              <div key={index} className={styles.educationItem}>
+                <h3 className={styles.educationInstitution}>{cert.title}</h3>
+                <p className={styles.educationDegree}>Issued by {cert.issuer}</p>
+                <p className={styles.educationMeta}>Credential ID: {cert.credentialId}</p>
+              </div>
+            ))}
           </section>
 
           {/* Beyond Code Section */}
