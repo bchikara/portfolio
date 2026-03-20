@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     title: 'Opus',
     description:
-      `Opus is a professional recording and streaming platform that cuts post-recording time from 50 minutes to 5 by processing 90% of transcoding during recording. It supports real-time collaboration for 8+ participants and packs AI features — Coqui TTS voice generation, Whisper transcription, and GPT-4 chapter highlights.`,
+      `Opus is a professional recording and streaming platform that cuts post-recording time from 50 minutes to 5 by processing 90% of transcoding during recording. It supports real-time collaboration for 8+ participants and packs AI features - Coqui TTS voice generation, Whisper transcription, and GPT-4 chapter highlights.`,
     logo: '/logos/opus.svg',
     link: 'https://github.com/bchikara/opus?tab=readme-ov-file#-demo',
     github_link:'https://github.com/bchikara/opus',
@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
     title: 'ProCode',
     description:
-      `ProCode is a PWA that replicates a real coding interview experience. An AI-powered avatar presents questions, listens to your thought process, offers guidance, and evaluates code submissions — mimicking a live technical interview.`,
+      `ProCode is a PWA that replicates a real coding interview experience. An AI-powered avatar presents questions, listens to your thought process, offers guidance, and evaluates code submissions - mimicking a live technical interview.`,
     logo: '/logos/procode.png',
     link: 'https://www.youtube.com/watch?v=yECqnPjo67A',
     github_link:'',
@@ -42,7 +42,7 @@ export const projects: Project[] = [
   {
     title: 'LaCarte',
     description:
-      ‘LaCarte is a smart QR code dining app that lets customers browse the menu, place orders, and pay — all without a waiter. A faster, contactless experience for both diners and restaurants.’,
+      'LaCarte is a smart QR code dining app that lets customers browse the menu, place orders, and pay - all without a waiter. A faster, contactless experience for both diners and restaurants.',
     logo: '/logos/la_carte.png',
     link: 'https://thelacarte.com/',
     github_link:'https://github.com/bchikara/la-carte',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
   },
   {
     title:'Cold Mail OutReach',
-    description:'Cold Mail Outreach is a full-stack app that streamlines job hunting. Manage contacts, use dynamic email templates, send personalized emails with attachments, and track outreach history — all from a sleek dark-mode interface.',
+    description:'Cold Mail Outreach is a full-stack app that streamlines job hunting. Manage contacts, use dynamic email templates, send personalized emails with attachments, and track outreach history - all from a sleek dark-mode interface.',
     logo: '/logos/cold_mail_outreach.png',
     link:'https://cold-mail-outreach.vercel.app/',
     github_link:'https://github.com/bchikara/cold-mail-outreach',
@@ -61,7 +61,7 @@ export const projects: Project[] = [
   {
     title: 'Job Automator',
     description:
-      `Job Automator is an AI-powered CLI that automates the job hunt. It scrapes listings, tailors resumes with Gemini AI, auto-fills ATS forms via Selenium, and tracks every application in MongoDB — achieving ~90% success on complex forms.`,
+      `Job Automator is an AI-powered CLI that automates the job hunt. It scrapes listings, tailors resumes with Gemini AI, auto-fills ATS forms via Selenium, and tracks every application in MongoDB - achieving ~90% success on complex forms.`,
     logo: '/logos/job_automator.png',
     link: 'https://github.com/bchikara/job_automater?tab=readme-ov-file#-automated-job-application-assistant',
     github_link: 'https://github.com/bchikara/job_automater?tab=readme-ov-file#-automated-job-application-assistant',
@@ -70,7 +70,7 @@ export const projects: Project[] = [
   },{
     title: 'VinayakM',
     description:
-      'VinayakM is a healthcare platform connecting doctors and patients. Patients can browse doctors, book consultations, and receive digital prescriptions — all in one seamless app.',
+      'VinayakM is a healthcare platform connecting doctors and patients. Patients can browse doctors, book consultations, and receive digital prescriptions - all in one seamless app.',
     logo: '/logos/vinayakm.svg',
     link: '',
     github_link:'',
@@ -90,7 +90,7 @@ export const projects: Project[] = [
   {
     title: 'Real-time Hand Gesture Recognition',
     description:
-      'Real-time Hand Gesture Recognition uses a CNN model to analyze hand gestures and predict corresponding words or phrases — designed to assist individuals who are deaf or verbally challenged with more inclusive communication.',
+      'Real-time Hand Gesture Recognition uses a CNN model to analyze hand gestures and predict corresponding words or phrases - designed to assist individuals who are deaf or verbally challenged with more inclusive communication.',
     logo: '/logos/gesture.png',
     link: 'https://github.com/bchikara/real-time_hand_gesture?tab=readme-ov-file#-screenshots--demonstration',
     github_link:'https://github.com/bchikara/real-time_hand_gesture',
