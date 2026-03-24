@@ -38,25 +38,28 @@ const awardsData = [
 
 const skillsCodeString = `const bhupesh = {
   pronouns: "He" | "Him",
-  code: ["TypeScript", "JavaScript", "Python"],
+  code: ["TypeScript", "JavaScript", "Python", "Java"],
   askMeAbout: ["web dev", "app dev", "UI/UX", "tech trends"],
   technologies: {
     frontEnd: {
       js: ["React", "Angular 4+", "Next.js"],
       css: ["Sass", "Tailwind", "Bootstrap"],
       uiLibraries: ["Material UI", "Ant Design", "Chakra UI"],
+      misc: ["RxJS", "GraphQL"],
     },
     backEnd: {
       js: ["Node", "Express", "NestJS"],
-      python: ["Flask"],
+      python: ["Django", "Django Ninja", "Django Tenants", "Flask", "FastAPI"],
     },
-    devOps: ["Docker", "CI/CD", "Nginx", "GitHub Actions"],
+    devOps: ["Docker", "CI/CD", "GitLab CI/CD", "Nginx", "GitHub Actions", "IAM"],
     cloudServices: {
-      aws: ["AWS Fargate", "EC2", "S3", "Lambda"],
+      aws: ["AWS Fargate", "EC2", "S3", "Lambda", "IAM", "Bedrock"],
     },
-    databases: ["PostgreSQL", "MongoDB", "SQLite", "Firebase Realtime DB", "redis"],
-    misc: ["Socket.IO", "REST APIs", "WebSockets", "Cloud Functions"],
-    generativeAI: ["GPT", "Vectorization"],
+    databases: ["PostgreSQL", "MongoDB", "SQLite", "Firebase Realtime DB", "Redis"],
+    realTime: ["Kafka", "BullMQ", "Socket.IO", "WebSockets", "WebRTC", "SignalR"],
+    monitoring: ["Prometheus", "Grafana"],
+    misc: ["REST APIs", "GraphQL", "Cloud Functions"],
+    generativeAI: ["Claude", "OpenAI API", "Gemini", "AWS Bedrock", "LangChain", "RAG", "MCP", "Vectorization"],
   },
   architecture: {
     frontEnd: ["SPA", "SSR"],
