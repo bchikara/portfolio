@@ -38,36 +38,33 @@ const awardsData = [
 
 const skillsCodeString = `const bhupesh = {
   pronouns: "He" | "Him",
-  code: ["TypeScript", "JavaScript", "Python"],
-  askMeAbout: ["web dev", "app dev", "UI/UX", "tech trends"],
+  code: ["Python", "TypeScript", "JavaScript", "Node.js", "SQL"],
+  askMeAbout: ["backend", "distributed systems", "AI agents", "real-time systems"],
   technologies: {
-    frontEnd: {
-      js: ["React", "Angular 4+", "Next.js"],
-      css: ["Sass", "Tailwind", "Bootstrap"],
-      uiLibraries: ["Material UI", "Ant Design", "Chakra UI"],
-      misc: ["RxJS", "GraphQL"],
-    },
     backEnd: {
-      js: ["Node", "Express", "NestJS"],
       python: ["FastAPI", "Flask"],
+      js: ["Node", "Express", "NestJS"],
+      apis: ["REST", "GraphQL", "WebSockets"],
     },
-    devOps: ["Docker", "CI/CD", "GitLab CI/CD", "Nginx", "GitHub Actions", "IAM"],
+    distributedSystems: [
+      "concurrency", "idempotency", "distributed locking", "ACID transactions",
+      "optimistic concurrency", "backpressure", "rate limiting",
+      "circuit breakers", "retries", "dead-letter queues",
+    ],
+    databases: ["PostgreSQL", "Redis", "MongoDB", "pgvector"],
+    messaging: ["Kafka", "GCP Pub/Sub", "WebSockets"],
     cloudServices: {
-      aws: ["AWS Fargate", "EC2", "S3", "Lambda", "IAM", "Bedrock"],
+      aws: ["EC2", "S3", "Lambda", "RDS"],
+      gcp: ["Cloud Run", "Pub/Sub"],
     },
-    databases: ["PostgreSQL", "MongoDB", "SQLite", "Firebase Realtime DB", "Redis"],
-    realTime: ["Kafka", "BullMQ", "Socket.IO", "WebSockets", "WebRTC", "SignalR"],
-    monitoring: ["Prometheus", "Grafana"],
-    misc: ["REST APIs", "GraphQL", "Cloud Functions"],
-    generativeAI: ["Claude", "OpenAI API", "Gemini", "AWS Bedrock", "LangChain", "RAG", "MCP", "Vectorization"],
+    devOps: ["Docker", "CloudFormation", "Serverless Framework", "blue-green CI/CD", "GitHub Actions"],
+    monitoring: ["Datadog", "Prometheus", "Grafana", "Splunk"],
+    generativeAI: ["Claude", "OpenAI API", "Gemini", "AI agents", "tool calling", "RAG", "evals", "guardrails"],
+    aiDevTools: ["Claude Code", "Cursor", "GitHub Copilot"],
+    frontEnd: ["React", "Next.js"],
   },
-  architecture: {
-    frontEnd: ["SPA", "SSR"],
-    backEnd: ["microservices", "monolithic", "serverless"],
-    devOps: ["Cloudformation", "Serverless Framework"],
-    databases: ["Relational", "NoSQL", "In-memory"],
-  },
-  currentFocus: "Leading the way in full-stack development and cloud innovation.",
+  practices: ["Agile", "Test Driven Development", "code and design review"],
+  currentFocus: "Backend and distributed systems, with AI as a core part of how I build.",
   funFact: "Balancing code, coffee, and the NYC subway-debugging while the city never sleeps!"
 };`;
 
@@ -76,39 +73,48 @@ const experienceData = [
         company: 'Osyte Inc.',
         title: 'Senior Software Engineer',
         dates: 'May 2025 – Present',
-        location: 'New York, NY',
-        tech: 'Python, Node.js, TypeScript, FastAPI, PostgreSQL, Redis, AWS, ADP API, OpenAI API, AWS Bedrock, Prometheus, Grafana',
+        location: 'Remote',
+        tech: 'Python, Node.js, TypeScript, PostgreSQL, Redis, Docker, AWS, GCP',
         duties: [
-        'Built and owned backend infrastructure for a production fintech SaaS on Node.js, Python, PostgreSQL, Redis, and AWS — maintained 99.99% uptime across multi-tenant architecture serving real financial transactions at scale.',
-        'Cut payroll processing time 50% for 5,500+ employees via idempotent ADP integration with exactly-once transaction semantics across distributed backend systems.',
-        'Reduced workflow latency 40%+ by engineering an NLP/ML inference orchestration pipeline using OpenAI API and AWS Bedrock — eliminating manual human-in-the-loop bottlenecks.',
-        'Built reusable LLM agent modules and prompt templates with Claude, accelerating AI delivery across teams.',
+        'Built the core services of the company\'s backend platform, designing Python (FastAPI) and Node.js microservices with typed REST APIs over PostgreSQL and Redis, and owning them from design to production.',
+        'Kept services correct under concurrent load by making every handler idempotent, guarding shared state with distributed locks, pooling connections and applying backpressure on third-party calls.',
+        'Made failures recoverable instead of silent with retries, rate limiting and dead-letter queues on the asynchronous message queues, so no customer data was lost when a downstream dependency went down.',
+        'Built the cloud infrastructure automation for the platform on AWS and GCP: reusable GitHub Actions workflows that build Docker images, validate every change and roll it out to Cloud Run and AWS.',
+        'Owned live-site health for the platform by adding structured logging, request tracing, dashboards and alerts, and taking on-call for incidents and root-cause analysis with the support team.',
+        'Designed systems where AI agents work inside human workflows, using tool calling, structured outputs and retrieval over domain documents, with safety gates and review checkpoints before any action.',
+        'Made AI output reliable enough for production by writing structured prompts, keeping the system designs, constraints and standards in a shared context repository, and grading changes with evals.',
+        'Used AI as a core part of the development workflow with Claude Code and Cursor, and reviewed all generated code for correctness, security and performance before it merged.',
+        'Set the team\'s engineering standards for code review, Test Driven Development and Agile delivery, and balanced new features against live-site work and paying down technical debt.',
         ],
     },
     {
-        company: 'Deloitte',
-        title: 'Senior AI Engineer / Full Stack Developer',
+        company: 'Deloitte (Client: PayPal)',
+        title: 'Senior Software Engineer',
         dates: 'Feb 2021 – Jan 2024',
-        location: 'Bangalore, India',
-        tech: 'Python, React, Redux, D3.js, Node.js, Three.js, TypeScript, AWS, GraphQL, GitHub Copilot, Claude, Amazon Bedrock',
+        location: 'Bengaluru, India',
+        tech: 'Python, Node.js, TypeScript, PostgreSQL, Kafka, AWS',
         duties: [
-        'Delivered full-stack platform and AI architecture as a Deloitte consultant for PayPal — engineered distributed backend systems within PayPal\'s payments ecosystem processing $500M+ in transactions across 15 enterprise departments.',
-        'Owned GraphQL and REST API platform serving 2.5M+ weekly requests at 99.99% uptime — schema stitching, circuit breakers, N+1 elimination, 40% throughput increase.',
-        'Built distributed analytics infrastructure on AWS processing 10M+ monthly financial transactions — drove 35% engagement growth and 25% lower decision latency.',
-        'Led 7 HLD/LLD design reviews; blue-green CI/CD on AWS with 100% build automation; mentored 3 engineers — awarded Applause Award (3x consecutive).',
+        'Owned and operated multiple instances of a critical backend service in Python and Node.js on PayPal\'s payments platform, a large-scale distributed system running across multiple data centers.',
+        'Kept the system highly available when dependencies failed by placing resilient abstraction layers over legacy systems, with idempotency keys, circuit breakers, retries and caching.',
+        'Handled concurrency safely across services by guarding shared state with locks and idempotency keys, and moving contended database writes to optimistic concurrency.',
+        'Built event-driven pipelines on Kafka with partitioned topics, consumer groups and idempotent consumers, so services stayed decoupled and a retry or replay never processed a payment event twice.',
+        'Solved data management problems on PostgreSQL by removing N+1 queries, adding targeted indexes and wrapping every money movement in an ACID transaction.',
+        'Automated infrastructure and releases on AWS with Infrastructure-as-Code in CloudFormation and blue-green CI/CD pipelines, so every build and deployment ran without manual steps.',
+        'Served on the team\'s on-call rotation, resolving production incidents in real time by tracing failures through logs and dashboards in Splunk and Grafana, then fixing the root cause.',
+        'Passed security and compliance reviews by building audit trails, access controls and careful data handling into the services from the start rather than retrofitting them.',
+        'Led design reviews and mentored engineers across a distributed Agile team; received Deloitte\'s Applause Award in consecutive years.',
         ],
     },
     {
         company: 'TO THE NEW',
-        title: 'AI Engineer / Full Stack Developer',
+        title: 'Full Stack Engineer',
         dates: 'Feb 2020 – Feb 2021',
         location: 'Noida, India',
-        tech: 'Angular 4+, Node.js, MongoDB, Express, RxJS, Python',
+        tech: 'Python, Node.js, TypeScript, WebSockets, PostgreSQL',
         duties: [
-        'Delivered full-stack solutions for enterprise clients including PwC — owning both the UI layer and the API contracts beneath it.',
-        'Migrated PwC\'s dashboard to Angular 4+ with lazy-loading, code-splitting, and tree-shaking — reducing bundle size 25% and lifting engagement 18%.',
-        'Designed REST API and MongoDB schema for the TCH portal with indexing and aggregation pipelines — resolved the top 3 production crashes and scaled to 500+ concurrent users.',
-        'Engineered async data workflows using RxJS (switchMap, debounceTime), request caching, and retry logic — cut page load time 50% and increased user retention 15%.',
+        'Delivered backend features end to end for a PwC enterprise platform, building Node.js and Python services and working inside the client\'s Agile teams.',
+        'Fixed the platform\'s top production crashes with no data loss by tracing logs back to race conditions and unhandled edge cases, and writing a failing test for each one before the fix, test-driven.',
+        'Built a real-time WebSocket pipeline for live updates and cut redundant round-trips to the database by batching queries in the data layer.',
         ],
     },
     {
@@ -126,14 +132,14 @@ const experienceData = [
     },
     {
         company: 'Smart Joules Pvt. Ltd.',
-        title: 'Full Stack Developer',
-        dates: 'Sept 2018 – Dec 2019',
-        location: 'Dehradun, India',
-        tech: 'Angular, D3.js, TypeScript, RxJS, Node.js, Express',
+        title: 'Software Engineer',
+        dates: 'Sep 2018 – Dec 2019',
+        location: 'New Delhi, India',
+        tech: 'Node.js, Python, PostgreSQL, REST APIs, IoT',
         duties: [
-        'Created interactive D3 dashboards, advanced multi-select autocomplete components, and dynamic charting applications to improve data visualization and user experience.',
-        'Developed and published an open-source NPM module for multi-select autocomplete, increasing community contributions and adoption by 40%.',
-        'Built and integrated RESTful APIs using Node.js (Express), improving backend communication and reducing data fetching overhead by 35%.',
+        'Built real-time data pipelines in Node.js and Python that ingested live IoT sensor streams into a PostgreSQL schema designed from scratch, feeding monitoring dashboards for building operators.',
+        'Designed configurable, role-filtered REST APIs so each customer saw only their own data, and onboarded the first client sites directly.',
+        'Contributed to open source by publishing an NPM module extracted from the platform\'s shared code.',
         ],
     },
 ];
@@ -162,13 +168,12 @@ const AboutPage = () => {
           {/* Introduction Section */}
           <section className={styles.section}>
             <p className={styles.paragraph}>
-              Hi! I&apos;m Bhupesh Chikara, a Software Engineer with a
-              Master of Science in Computer Science from <span className={styles.highlight}>Syracuse University</span> (Dec 2025). I have a strong
-              background in full-stack development, primarily focusing on JavaScript, TypeScript,
-              and the React ecosystem (React, Redux, Next.js).
+              Hi! I&apos;m Bhupesh Chikara, a backend and distributed systems engineer with a
+              Master of Science in Computer Science from <span className={styles.highlight}>Syracuse University</span> (Dec 2025). I design, build
+              and operate services in Python, Node.js and TypeScript on AWS and GCP.
             </p>
             <p className={styles.paragraph}>
-              My professional experience includes designing and implementing scalable applications, enhancing user experiences with data visualization tools like D3.js and Three.js, and working with various backend technologies including Node.js, MongoDB, and AWS services. I am passionate about building robust systems, solving complex problems, and continuously exploring new technologies.
+              I work on the problems that decide whether a large system stays up: concurrency, idempotency, distributed locking, backpressure, retries and circuit breakers, and data management on PostgreSQL, Redis and Kafka. I built and operated services on PayPal&apos;s payments platform at Deloitte, and now build the backend platform at Osyte. AI is a core part of how I work: I use Claude Code and Cursor daily and review every change, human or AI-generated, for correctness, security and performance.
             </p>
           </section>
 

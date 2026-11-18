@@ -15,8 +15,8 @@ export default function HomePage() {
     },
     { code: '  const developerInfo = {', type: 'variable' },
     { code: "    name: 'Bhupesh Chikara',", type: 'array-item' },
-    { code: "    role: 'Full Stack Developer',", type: 'array-item' },
-    { code: "    bio: 'Building modern web experiences'", type: 'array-item' },
+    { code: "    role: 'Backend & Distributed Systems Engineer',", type: 'array-item' },
+    { code: "    bio: 'Building reliable backend systems'", type: 'array-item' },
     { code: '  };', type: 'array-end' },
     { code: '', type: 'blank' },
     { code: '  useEffect(() => {', type: 'nested-function' },
@@ -98,11 +98,11 @@ export default function HomePage() {
             Bhupesh <span className={styles.accentText}>Chikara</span>
           </h1>
 
-          <div className={styles.developerRole}>Full Stack Web Developer</div>
+          <div className={styles.developerRole}>Backend &amp; Distributed Systems Engineer</div>
 
           <p className={styles.bio}>
-            I build elegant, responsive web applications with modern
-            technologies. Focused on clean code and intuitive user experiences.
+            I design, build and operate backend services in Python, Node.js and
+            TypeScript on AWS and GCP. Focused on systems that stay correct under load.
           </p>
 
           <div className={styles.actionLinks}>
