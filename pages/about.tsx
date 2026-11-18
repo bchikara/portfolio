@@ -38,7 +38,7 @@ const awardsData = [
 
 const skillsCodeString = `const bhupesh = {
   pronouns: "He" | "Him",
-  code: ["TypeScript", "JavaScript", "Python", "Java"],
+  code: ["TypeScript", "JavaScript", "Python"],
   askMeAbout: ["web dev", "app dev", "UI/UX", "tech trends"],
   technologies: {
     frontEnd: {
@@ -49,7 +49,7 @@ const skillsCodeString = `const bhupesh = {
     },
     backEnd: {
       js: ["Node", "Express", "NestJS"],
-      python: ["Django", "Django Ninja", "Django Tenants", "Flask", "FastAPI"],
+      python: ["FastAPI", "Flask"],
     },
     devOps: ["Docker", "CI/CD", "GitLab CI/CD", "Nginx", "GitHub Actions", "IAM"],
     cloudServices: {
@@ -73,14 +73,14 @@ const skillsCodeString = `const bhupesh = {
 
 const experienceData = [
     {
-        company: 'Stealth Startup',
-        title: 'AI Engineer / Full Stack Intern',
-        dates: 'May 2025 – Dec 2025',
+        company: 'Osyte Inc.',
+        title: 'Senior Software Engineer',
+        dates: 'May 2025 – Present',
         location: 'New York, NY',
-        tech: 'Python, Node.js, TypeScript, Django, PostgreSQL, Redis, AWS, ADP API, OpenAI API, AWS Bedrock, Prometheus, Grafana',
+        tech: 'Python, Node.js, TypeScript, FastAPI, PostgreSQL, Redis, AWS, ADP API, OpenAI API, AWS Bedrock, Prometheus, Grafana',
         duties: [
         'Built and owned backend infrastructure for a production fintech SaaS on Node.js, Python, PostgreSQL, Redis, and AWS — maintained 99.99% uptime across multi-tenant architecture serving real financial transactions at scale.',
-        'Cut payroll processing time 50% for 5,500+ employees via idempotent ADP integration with exactly-once transaction semantics across distributed Django backend systems.',
+        'Cut payroll processing time 50% for 5,500+ employees via idempotent ADP integration with exactly-once transaction semantics across distributed backend systems.',
         'Reduced workflow latency 40%+ by engineering an NLP/ML inference orchestration pipeline using OpenAI API and AWS Bedrock — eliminating manual human-in-the-loop bottlenecks.',
         'Built reusable LLM agent modules and prompt templates with Claude, accelerating AI delivery across teams.',
         ],
@@ -162,8 +162,8 @@ const AboutPage = () => {
           {/* Introduction Section */}
           <section className={styles.section}>
             <p className={styles.paragraph}>
-              Hi! I&apos;m Bhupesh Chikara, a Software Engineer currently pursuing a
-              Master of Science in Computer Science at <span className={styles.highlight}>Syracuse University</span> (Expected Dec 2025). I have a strong
+              Hi! I&apos;m Bhupesh Chikara, a Software Engineer with a
+              Master of Science in Computer Science from <span className={styles.highlight}>Syracuse University</span> (Dec 2025). I have a strong
               background in full-stack development, primarily focusing on JavaScript, TypeScript,
               and the React ecosystem (React, Redux, Next.js).
             </p>
@@ -252,7 +252,7 @@ const AboutPage = () => {
             <div className={styles.educationItem}>
                 <h3 className={styles.educationInstitution}>Syracuse University</h3>
                 <p className={styles.educationDegree}>Master of Science in Computer Science</p>
-                <p className={styles.educationMeta}>Syracuse, NY | Jan 2024 – Dec 2025 (Expected)</p>
+                <p className={styles.educationMeta}>Syracuse, NY | Jan 2024 – Dec 2025</p>
             </div>
             <div className={styles.educationItem}>
                 <h3 className={styles.educationInstitution}>DIT University</h3>
